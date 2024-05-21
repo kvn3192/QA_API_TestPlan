@@ -465,6 +465,10 @@
 						"exec": [
 							"pm.test(\"Verify that the status is the correct 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that updated message is shown\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"updatedAt\");\r",
 							"});"
 						],
 						"type": "text/javascript",
